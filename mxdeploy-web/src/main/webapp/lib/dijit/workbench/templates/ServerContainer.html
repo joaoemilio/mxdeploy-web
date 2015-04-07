@@ -1,0 +1,40 @@
+    <div data-dojo-type="dijit/layout/ContentPane" class="containerFrame_outer" data-dojo-attach-point="serverContainer">
+        <div class="containerFrame_inner containerFrame_border" data-dojo-attach-point="frameInnerContainer">
+            <div  class="containerFrame_content">
+                <div style="height: 18px; top: 0px; right: 0" align="right">
+                    <span data-dojo-type="dijit/Toolbar" style="display: none" data-dojo-attach-point="toolbar">
+                            <input type="button" data-dojo-type="dijit/form/Button"
+                                   intermediateChanges="false"
+                                   iconClass="frameToolbarIcon deleteIcon"
+                                   showLabel="false"
+                                   data-dojo-attach-point="removeServerButton"></input>
+                     </span>
+                </div>
+                <div class="containerFrame_componentDetails">
+                    <div class="title" >
+                        <table width="100%">
+                            <tbody>
+                            <tr>
+                                <td class="titleImagePane" valign="top">
+                                    <img src="images/linux-server.png" style="height: 55px;">
+                                </td>
+                                <td class="titleText">
+                                    <div data-dojo-attach-point="nameNode" data-dojo-type="dijit/InlineEditBox"
+                                         style="width: 126px; margin-left: 5px;">${title}</div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <hr class="separateLine"  style="display: block;">
+
+                <div data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Softwares and Scripts' "
+                     style="display: block; background: none repeat scroll 0% 0% transparent;">
+                    <div data-dojo-type="dojo/dnd/Target" jsId="targetData" class="target"
+                         accept="software,scriptPackage">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

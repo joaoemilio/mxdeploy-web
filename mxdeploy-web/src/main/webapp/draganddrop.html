@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="dj_gecko dj_ff36 dj_contentbox" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Even More Fun with Moveables!</title>
+    <link href="./css/index.css" rel="stylesheet" type="text/css"></link>
+    <link href="./css/appbuilder.css" rel="stylesheet" type="text/css"></link>
+    <link href="./css/builder.css" rel="stylesheet" type="text/css"></link>
+
+    <script type="text/javascript" src="./lib/dojo/dojo.js" djConfig="parseOnLoad:true,isDebug:true"></script>
+
+
+    <script type="text/javascript">
+        dojo.require([
+              "dijit/layout/ContentPane"
+            , "dojo/dnd/Moveable"
+            , "dijit/TitlePane"
+            , "dijit/Toolbar"
+            , "dijit/form/Button"
+            , "dojo/dnd/Source"
+            , "dojo/dnd/Target"
+            , "dijit/workbench/BorderContainerCustom"
+            , "dijit/workbench/TopContainer"
+            , "dijit/workbench/ScriptPackageMenuItem"
+            , "dijit/workbench/SoftwareMenuItem"
+            , "dijit/workbench/ServerContainer"
+            , "dijit/layout/StackContainer"
+            , "dijit/workbench/DiagramContainer"
+            , "dijit/form/ValidationTextBox"
+            , "dijit/workbench/BorderRightTitleContainer"
+        ]);</script>
+</head>
+<body class="oneui appModeler">
+	<div id="editorTab" data-dojo-type="dijit/layout/ContentPane"	style="height: 100%; width: 100%; background-color: white; padding: 0px;">
+        <div data-dojo-type="dijit/workbench/BorderContainerCustom" design="headline"   persist="false" gutters="true"	style="height: 100%; width: 100%; padding: 0px;">
+            <!--TOP-->
+            <div data-dojo-type="dijit/layout/ContentPane" extractContent="false"
+                preventCache="false" preload="false" refreshOnShow="false"
+                region="top" splitter="true" maxSize="10px" doLayout="true">
+                <div data-dojo-type="dijit/workbench/TopContainer" title="Builder" username="fsbsilva@gmail.com"></div>
+            </div>
+            <!--LEFT-->
+            <div class="titlePaneMenuLeft" data-dojo-type="dijit/layout/ContentPane" extractContent="false"
+                preventCache="false" preload="false" refreshOnShow="false"
+                region="left" splitter="true" maxSize="Infinity" doLayout="false"
+                style="width: 219px;">
+                <div class="titlePaneMenuLeft" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Software Component'">
+
+                    <div class="subTilePaneMenuLeft"  data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'WebSphere'">
+                        <div data-dojo-type="dojo/dnd/Source" jsId="sourceData" class="source" copyOnly="true">
+                            <div data-dojo-type="dijit/workbench/SoftwareMenuItem" title="Deployment Manager" iconClass="websphere-icon"></div>
+                            <div data-dojo-type="dijit/workbench/SoftwareMenuItem" title="Custom Node" iconClass="websphere-icon"></div>
+                        </div>
+                    </div>
+                    <div data-dojo-type="dojo/dnd/Source" jsId="sourceData" class="source">
+                        <div data-dojo-type="dijit/workbench/SoftwareMenuItem" title="JBoss EA" iconClass="dijitServerRunIcon"></div>
+                        <div data-dojo-type="dijit/workbench/SoftwareMenuItem" title="IBM HTTP Server" iconClass="dijitServerRunIcon"></div>
+                    </div>
+
+                </div>
+                <div class="titlePaneMenuLeft" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Script Package'">
+                    <div data-dojo-type="dojo/dnd/Source" jsId="sourceData" class="source" copyOnly="true">
+                        <div data-dojo-type="dijit/workbench/ScriptPackageMenuItem" scriptName="Install ADS"></div>
+                        <div data-dojo-type="dijit/workbench/ScriptPackageMenuItem" scriptName="Install WDS"></div>
+                    </div>
+
+                </div>
+            </div>
+            <!--CENTER-->
+            <div id="borderContainerCenter" data-dojo-type="dijit/layout/ContentPane" extractContent="false"
+                preventCache="false" preload="false" refreshOnShow="false"
+                region="center" >
+                <div data-dojo-type="dijit/workbench/DiagramContainer" style="border: 10px;">
+                    <div data-dojo-type="dijit/layout/ContentPane">
+
+                            <div data-dojo-type="dijit/workbench/ServerContainer" title="LPPWA987" style="position: absolute; left: 40px; top: 40px;"></div>
+
+
+                            <div data-dojo-type="dijit/workbench/ServerContainer" title="LPPWA988" style="position: absolute; left: 240px; top: 40px;"></div>
+
+                    </div>
+                </div>
+            </div>
+            <!--RIGHT-->
+            <div data-dojo-type="dijit/layout/ContentPane" extractContent="false"
+                preventCache="false" preload="false" refreshOnShow="false"
+                region="right" splitter="true" maxSize="Infinity" doLayout="false"
+                style="width: 240px;">
+                <div class="propertyPanel">
+
+                    <div data-dojo-type="dijit/layout/StackContainer" data-dojo-id="myStackContainer">
+                        <div data-dojo-type="dijit/layout/ContentPane">
+                            <div data-dojo-type="dijit/workbench/BorderRightTitleContainer" title="LPPWA987"></div>
+                            <div class="name">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td class="TD">
+                                            <div class="nameArea">
+                                                <span data-dojo-attach-point="requiredMark" class="requireShow">*</span>
+                                                <label for="nameNode" title="Name" class="name-node">Name</label>
+                                            </div>
+                                            <input type="text" id="nameNode" name="nameNode" value="LPPWA987"
+                                                   data-dojo-type="dijit/form/ValidationTextBox"
+                                                   data-dojo-props="trim:true, propercase:true"/>
+
+                                        </td>
+                                        <td data-dojo-attach-point="valueArea"></td>
+                                        <td data-dojo-attach-point="lockArea" style="vertical-align: bottom;">
+                                            <a data-dojo-attach-point="lockNode" style="display: block">
+                                                <img data-dojo-attach-point="lockImgNode" src="images/locked_24.png" alt="image">
+                                            </a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</body>
+</html>

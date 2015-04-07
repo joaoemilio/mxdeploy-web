@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even More Fun with Moveables!</title>
+    <link href="../../themes/builder/index.css" rel="stylesheet" type="text/css"></link>
+    <link href="../../themes/builder/appbuilder.css" rel="stylesheet" type="text/css"></link>
+
+</head>
+<body class="oneui appModeler">
+<div id="editorTab" data-dojo-type="dijit/layout/ContentPane"
+     style="height: 100%; width: 100%; background-color: white; padding: 0px;">
+
+    <div tabindex="0" class="hideOutline containerFrame" >
+        <div data-dojo-type="dojo/dnd/Moveable"
+             class="hideOutline containerFrame"
+             style="position: absolute; left: 40px; top: 40px;">
+            <div dojoAttachPoint="frameBorderContainer" class="containerFrame_outer">
+                <div align="left" dojoAttachPoint="outerDisplayContainer"
+                     style="position:absolute;top:-9px;left:-9px;display: none;"></div>
+                <div dojoAttachPoint="frameInnerContainer" class="containerFrame_inner">
+                    <div dojoAttachPoint="portContainer" class="containerFrame_port"></div>
+                    <div dojoAttachPoint="scanContainer" style="display: none" class="containerFrame_scan">
+                        <img style="vertical-align: text-top;" class="icon-image" alt="${scanningHint}"
+                             title="${scanningHint}" src="/images/cloud/progress-indicator-small.gif"></div>
+                    <div dojoAttachPoint="policyShortcutContainer" class="policyShortcut" style="display: none"></div>
+                    <div dojoAttachPoint="backImageContainer" class="containerFrame_backImage"
+                         style="display:none"></div>
+                    <div dojoAttachPoint="figureImage" style="display:none"></div>
+                    <div dojoAttachPoint="contentContainer" class="containerFrame_content">
+                        <div align="right" style="height:18px;top:0px;right:0">
+                            <div dojoType="dijit.Toolbar" dojoAttachPoint="toolbar" class="toolbar" aria-label="toolbar"
+                                 style="height:14px;top:0px">
+
+                            </div>
+                        </div>
+                        <div class="containerFrame_componentDetails">
+                            <div class="title" dojoAttachPoint="titleNode">
+                                <table width="100%" role="presentation">
+                                    <tr>
+                                        <td valign="top" class="titleImagePane">
+                                            <img dojoAttachPoint="titleImageNode" alt="image"></img>
+                                        </td>
+                                        <td class="titleText">
+                                            <div dojoAttachPoint="nameNode" dojoType="dijit.InlineEditBox"
+                                                 class="containerFrame_text"></div>
+                                            <div dojoAttachPoint="titleNameNode"
+                                                 style="font-size: 10px; color:#D4D4D4; text-align: center;"></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <hr class="separateLine" dojoAttachPoint="separator">
+                        <div dojoAttachPoint="policiesNode"></div>
+                    </div>
+                    <div dojoAttachPoint="statusArea">
+                        <div align="right">
+                            <div dojoType="builder.workbench.editor.LayerItem" dojoAttachPoint="layerNode"
+                                 style="height:20px;"></div>
+                        <span dojoAttachPoint="statusContainer"
+                              style="display: none;vertical-align: middle; cursor: pointer;">
+                            <span class="wca-image-attention-normal-icon" dojoAttachPoint="statusIconNode"
+                                  title="${attention_normal}" style="display:inline-block"></span>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div dojoAttachPoint="toolbarContainer" class="containerFrame_toolbarContainer"></div>
+            <div dojoAttachPoint="linkSupportStatus" class="containerFrame_linkSupportStatus"
+                 style="display:none"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
